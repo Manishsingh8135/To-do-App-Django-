@@ -57,37 +57,20 @@
                     <a class="delete-link" href="{% url 'task-delete' task.id %}">&#215;</a>
                 {%  endif %}
                
-
-
-
-
-
             </div>
 
-            {% empty%}
-            <h3>No item in the list</h3>
+            {% empty %}
+            <div style="text-align: center; padding-bottom: 10px; line-height: 1em;">
+                <h3>No item in the list</h3>
+                <h3>Create a <a style="text-decoration: none; color: #e53935;" href="{% url 'task-create' %}">New task</a> ! </h3>
+            </div>
+          
             {% endfor %}
         </div>
 
 
 
-         <!-- <table>
-            <tr>
-                <th>Items</th>
-            </tr>
-            {% for task in tasks %}
-
-            
-            <tr>
-                <td>{{task.title}}</td>
-                <td><a href="{% url 'task' task.id  %}">View</a></td>
-                <td><a href="{% url 'task-update' task.id %}">Edit</a></td>
-                <td><a href="{% url 'task-delete' task.id %}">Delete</a></td>
-            </tr>
-            {% endfor %}
-           
-        </table> 
- -->
+       
 
 
 
